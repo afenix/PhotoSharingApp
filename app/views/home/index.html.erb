@@ -1,3 +1,6 @@
+<span class="success"><%= flash[:notice] %></span>
+<span class="fail"><%= flash[:alert] %></span>
+
 <h1>Welcome to my Website</h1>
 
 <% if @users.any? %>
@@ -8,6 +11,8 @@
   <% end %>
 <% end %>
 
-<%= link_to "Add New User", new_user_path %>
+<%= link_to "Add New User", new_user_path, :class => "btn btn-success" %>
 
-<%= link_to "Log In", log_in_path %>
+<%= link_to "Log In", log_in_path, :class => "btn btn-primary" %>
+
+<%= link_to "Log Out", log_out_path, :class => "btn btn-warning" %>
