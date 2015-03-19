@@ -2,6 +2,9 @@
 <span class="fail"><%= flash[:alert] %></span>
 
 <h1>Welcome to my Website</h1>
+<% if current_user %>
+  <h3>You are logged in as: <span class="user"><%= current_user.email %></span></h3>
+<% end %>
 
 <% if @users.any? %>
   <% @users.each do |user| %>
