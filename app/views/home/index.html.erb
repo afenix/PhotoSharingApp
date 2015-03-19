@@ -1,1 +1,11 @@
 <h1>Welcome to my Website</h1>
+
+<% if @users.any? %>
+  <% @users.each do |user| %>
+    <ul>
+      <li><%= user.email %></li>
+    </ul>
+  <% end %>
+<% end %>
+
+<%= link_to "Add New User", new_user_path %>
