@@ -1,0 +1,8 @@
+<span class="success"><%= flash[:notice] %></span>
+<span class="fail"><%= flash[:alert] %></span>
+
+<h1>Your Photos</h1>
+
+<%= image_tag current_user.photos.first.file.url %>
+<%= image_tag current_user.photos.first.file.url(:medium) %>
+<%= image_tag current_user.photos.first.file.url(:thumb) %>

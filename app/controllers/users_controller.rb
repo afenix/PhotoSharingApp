@@ -14,8 +14,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
+  def update
+
+  end
+
 private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :file)
   end
 end

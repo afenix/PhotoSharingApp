@@ -1,0 +1,14 @@
+<span class="success"><%= flash[:notice] %></span>
+<span class="fail"><%= flash[:alert] %></span>
+
+<h1>Hello person with the email of: <%= current_user.email %></h1>
+
+<% if current_user.photos.any? %>
+
+  <%= image_tag current_user.photos.first.file.url %>
+  <%= image_tag current_user.photos.first.file.url(:medium) %>
+  <%= image_tag current_user.photos.first.file.url(:thumb) %>
+
+<% else %>
+  <%= link_to "Add a photo", new_photo_path, :class => "btn btn-primary" %>
+<% end %>

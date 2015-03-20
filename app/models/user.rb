@@ -5,8 +5,7 @@ class User < ActiveRecord::Base
   validates :password, length: { in: 6..20 }
   before_save :encrypt_password
   validates :email, :presence => true
-  has_attached_file :file, :styles => { :medium => "300x300>", :thumb => "100x100>" }
-  validates_attachment_content_type :file, :content_type => /\Aimage\/.*\Z/
+  has_many :photos
 
   def encrypt_password
     self.password_salt = BCrypt::Engine.generate_salt
