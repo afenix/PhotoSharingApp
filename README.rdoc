@@ -1,28 +1,25 @@
-== README
+= Photo Sharing App
+Work in progress. A simple ruby on rails photo sharing app. Allows a user to sign in (with user authentication) and add photos.  Functionality for photo upload is currently not working.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Deployment Instructions:
 
-Things you may want to cover:
+* Run Postrges Sever
 
-* Ruby version
+* Clone or download this repository and cd into blogster directory
 
-* System dependencies
+<tt> $ rake db:create $ rake db:migrate $ rails server</tt>
 
-* Configuration
+* In your browser visit localhost:3000
 
-* Database creation
+== Motivation 
+To practice building an application using Ruby on Rails, Active Record, and testing with Rspec and Capybara. Also, to practice learning PaperClip and ImageMagick. 
 
-* Database initialization
+== Bug Reports:
 
-* How to run the test suite
+There are none known at this time. Please do contact the author if you uncover any vermin hanging out in the code : a.fenix@icloud.com
 
-* Services (job queues, cache servers, search engines, etc.)
+== Author:
+<em>Alister A. Fenix, 2015.</em>
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== License
+Free and OS License. Code for the people by the people..
